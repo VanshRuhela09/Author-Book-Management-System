@@ -31,4 +31,26 @@ public class AuthorServiceImpl implements AuthorService {
                 .map(authorMapper::toResponse)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public AuthorResponse updateAuthor(Long id, AuthorRequest request) {
+
+        Author author = authorRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Author not found"));
+
+        author.setName(request.getName());
+        author.setEmail(request.getEmail());
+        author.setBio(request.getBio());
+
+        return authorMapper.toResponse(authorRepository.save(author));
+    }
+
+    @Override
+    public void deleteAuthor(Long id) {
+        if (!authorRepository.existsById(id)) {
+            throw new RuntimeException("Author not found");
+        }
+        authorRepository.deleteById(id);
+    }
+
 }

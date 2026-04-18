@@ -38,4 +38,27 @@ public class BookServiceImpl implements BookService {
                 .map(bookMapper::toResponse)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public BookResponse updateBook(Long id, BookRequest request) {
+
+        Book book = bookRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Book not found"));
+
+        book.setTitle(request.getTitle());
+        book.setIsbn(request.getIsbn());
+        book.setPublishedDate(request.getPublishedDate());
+        book.setPrice(request.getPrice());
+
+        return bookMapper.toResponse(bookRepository.save(book));
+    }
+
+    @Override
+    public void deleteBook(Long id) {
+        if (!bookRepository.existsById(id)) {
+            throw new RuntimeException("Book not found");
+        }
+        bookRepository.deleteById(id);
+    }
+
 }

@@ -10,4 +10,8 @@ public interface BookService {
     BookResponse createBook(BookRequest request);
 
     List<BookResponse> getAllBooks();
+
+    BookResponse updateBook(Long id, BookRequest request);
+
+    void deleteBook(Long id);
 }
