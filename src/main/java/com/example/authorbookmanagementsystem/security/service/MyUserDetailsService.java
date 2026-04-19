@@ -29,7 +29,7 @@ public class MyUserDetailsService implements UserDetailsService {
                 user.getRoles()
                         .stream()
                         .map(role -> new SimpleGrantedAuthority(
-                                role.getName().name() // FIXED: no extra ROLE_ prefix
+                                "ROLE_" + role.getRole().name() // Map ADMIN to ROLE_ADMIN for Spring Security
                         ))
                         .collect(Collectors.toList())
         );

@@ -27,7 +27,7 @@ public class AuthServiceImpl implements AuthService {
     @Override
     public AuthResponse register(RegisterRequest request) {
 
-        Role role = roleRepository.findByName(RoleName.ROLE_LIBRARIAN)
+        Role role = roleRepository.findByRole(RoleName.LIBRARIAN)
                 .orElseThrow(() -> new RuntimeException("Role not found"));
 
         User user = authMapper.toUser(request);

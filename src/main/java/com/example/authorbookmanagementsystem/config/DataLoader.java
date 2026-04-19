@@ -16,10 +16,9 @@ public class DataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         for (RoleName roleName : RoleName.values()) {
-            if (roleRepository.findByName(roleName).isEmpty()) {
-                roleRepository.save(Role.builder().name(roleName).build());
+            if (roleRepository.findByRole(roleName).isEmpty()) {
+                roleRepository.save(Role.builder().role(roleName).build());
             }
         }
     }
 }
-
