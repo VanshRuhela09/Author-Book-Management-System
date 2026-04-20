@@ -11,25 +11,27 @@ public class BookMapper {
 
     // DTO → Entity
     public Book toEntity(BookRequest request, Author author) {
-        return Book.builder()
-                .title(request.getTitle())
-                .isbn(request.getIsbn())
-                .publishedDate(request.getPublishedDate())
-                .price(request.getPrice())
-                .author(author) // relation mapping
-                .build();
+        Book book = new Book();
+        book.setTitle(request.getTitle());
+        book.setIsbn(request.getIsbn());
+        book.setPublishedDate(request.getPublishedDate());
+        book.setPrice(request.getPrice());
+        book.setAuthor(author);
+        return book;
     }
 
     // Entity → DTO
     public BookResponse toResponse(Book book) {
-        String authorName = book.getAuthor() != null ? book.getAuthor().getName() : null;
-        return BookResponse.builder()
-                .id(book.getId())
-                .title(book.getTitle())
-                .isbn(book.getIsbn())
-                .publishedDate(book.getPublishedDate())
-                .price(book.getPrice())
-                .author(authorName)
-                .build();
+        BookResponse response = new BookResponse();
+        response.setId(book.getId());
+        response.setTitle(book.getTitle());
+        response.setIsbn(book.getIsbn());
+        response.setPublishedDate(book.getPublishedDate());
+        response.setPrice(book.getPrice());
+        if (book.getAuthor() != null) {
+            response.setAuthor(book.getAuthor().getName());
+            response.setAuthorEmail(book.getAuthor().getEmail());
+        }
+        return response;
     }
 }

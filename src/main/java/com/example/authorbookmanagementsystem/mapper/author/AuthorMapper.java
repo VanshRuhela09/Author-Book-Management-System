@@ -3,37 +3,39 @@ package com.example.authorbookmanagementsystem.mapper.author;
 import com.example.authorbookmanagementsystem.dto.author.request.AuthorRequest;
 import com.example.authorbookmanagementsystem.dto.author.response.AuthorResponse;
 import com.example.authorbookmanagementsystem.entity.Author;
-import com.example.authorbookmanagementsystem.mapper.book.BookMapper;
 import org.springframework.stereotype.Component;
 
-import java.util.stream.Collectors;
+import java.util.List;
 
 @Component
 public class AuthorMapper {
 
-    private final BookMapper bookMapper;
-
-    public AuthorMapper(BookMapper bookMapper) {
-        this.bookMapper = bookMapper;
-    }
-
     // DTO → Entity
     public Author toEntity(AuthorRequest request) {
-        return Author.builder()
-                .name(request.getName())
-                .email(request.getEmail())
-                .bio(request.getBio())
-                .build();
+        Author author = new Author();
+        author.setName(request.getName());
+        author.setEmail(request.getEmail());
+        author.setBio(request.getBio());
+        return author;
     }
 
     // Entity → DTO
     public AuthorResponse toResponse(Author author) {
-        return AuthorResponse.builder()
-                .id(author.getId())
-                .name(author.getName())
-                .email(author.getEmail())
-                .bio(author.getBio())
-                .books(author.getBooks() != null ? author.getBooks().stream().map(book -> book.getTitle()).collect(java.util.stream.Collectors.toList()) : null)
-                .build();
+        AuthorResponse response = new AuthorResponse();
+        response.setId(author.getId());
+        response.setName(author.getName());
+        response.setEmail(author.getEmail());
+        response.setBio(author.getBio());
+        if (author.getBooks() != null) {
+            List<AuthorResponse.BookInfo> bookInfos = new java.util.ArrayList<>();
+            for (var book : author.getBooks()) {
+                AuthorResponse.BookInfo info = new AuthorResponse.BookInfo();
+                info.setTitle(book.getTitle());
+                info.setIsbn(book.getIsbn());
+                bookInfos.add(info);
+            }
+            response.setBooks(bookInfos);
+        }
+        return response;
     }
 }

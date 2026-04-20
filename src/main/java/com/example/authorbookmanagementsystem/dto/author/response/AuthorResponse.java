@@ -14,5 +14,16 @@ public class AuthorResponse {
     private String name;
     private String email;
     private String bio;
-    private List<String> books;
+    private List<BookInfo> books; // change from List<String> to List<BookInfo> for richer book info
+
+    // Add BookInfo inner class for book name and ISBN
+    @Getter
+    @Setter
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @Builder
+    public static class BookInfo {
+        private String title;
+        private String isbn;
+    }
 }

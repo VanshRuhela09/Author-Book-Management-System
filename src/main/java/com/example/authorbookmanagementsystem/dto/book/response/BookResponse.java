@@ -18,4 +18,5 @@ public class BookResponse {
     private Double price;
 
     private String author; // clean API response
+    private String authorEmail; // add author email for richer response
 }
