@@ -1,7 +1,6 @@
 package com.example.authorbookmanagementsystem.dto.book.response;
 
 import lombok.*;
-
 import java.time.LocalDate;
 
 @Getter
@@ -9,13 +8,10 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class BookResponse {
-
+public class BookSummaryResponse {
     private Long id;
     private String title;
     private String isbn;
     private LocalDate publishedDate;
     private Double price;
-
-    private String author; // clean API response
 }

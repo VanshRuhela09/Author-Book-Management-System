@@ -62,4 +62,10 @@ public class AuthorServiceImpl implements AuthorService {
         authorRepository.deleteById(id);
     }
 
+    @Override
+    public AuthorResponse getAuthorById(Long id) {
+        Author author = authorRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Author not found with id: " + id));
+        return authorMapper.toResponse(author);
+    }
 }

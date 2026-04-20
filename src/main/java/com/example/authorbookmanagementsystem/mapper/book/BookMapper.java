@@ -1,5 +1,6 @@
 package com.example.authorbookmanagementsystem.mapper.book;
 
+import com.example.authorbookmanagementsystem.dto.author.response.AuthorSummaryResponse;
 import com.example.authorbookmanagementsystem.dto.book.request.BookRequest;
 import com.example.authorbookmanagementsystem.dto.book.response.BookResponse;
 import com.example.authorbookmanagementsystem.entity.Author;
@@ -22,13 +23,14 @@ public class BookMapper {
 
     // Entity → DTO
     public BookResponse toResponse(Book book) {
+        String authorName = book.getAuthor() != null ? book.getAuthor().getName() : null;
         return BookResponse.builder()
                 .id(book.getId())
                 .title(book.getTitle())
                 .isbn(book.getIsbn())
                 .publishedDate(book.getPublishedDate())
                 .price(book.getPrice())
-                .authorName(book.getAuthor().getName())
+                .author(authorName)
                 .build();
     }
 }

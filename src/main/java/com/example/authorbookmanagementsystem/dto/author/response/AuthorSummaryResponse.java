@@ -1,18 +1,14 @@
 package com.example.authorbookmanagementsystem.dto.author.response;
 
 import lombok.*;
-import java.util.List;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class AuthorResponse {
-
+public class AuthorSummaryResponse {
     private Long id;
     private String name;
     private String email;
-    private String bio;
-    private List<String> books;
 }
