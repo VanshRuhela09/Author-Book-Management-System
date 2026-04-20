@@ -9,7 +9,11 @@ import com.example.authorbookmanagementsystem.entity.enums.RoleName;
 import com.example.authorbookmanagementsystem.mapper.auth.AuthMapper;
 import com.example.authorbookmanagementsystem.repository.role.RoleRepository;
 import com.example.authorbookmanagementsystem.repository.user.UserRepository;
+import com.example.authorbookmanagementsystem.security.jwt.JwtUtil;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +27,8 @@ public class AuthServiceImpl implements AuthService {
     private final RoleRepository roleRepository;
     private final PasswordEncoder passwordEncoder;
     private final AuthMapper authMapper;
+    private final JwtUtil jwtUtil;
+    private final AuthenticationManager authenticationManager;
 
     @Override
     public AuthResponse register(RegisterRequest request) {
@@ -42,7 +48,11 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public AuthResponse login(LoginRequest request) {
-        // actual authentication handled by Spring Security
-        return new AuthResponse("Login successful");
+        Authentication authentication = authenticationManager.authenticate(
+                new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
+        );
+
+        String token = jwtUtil.generateToken(authentication.getName());
+        return new AuthResponse("Login successful", token);
     }
 }
