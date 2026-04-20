@@ -1,6 +1,5 @@
 package com.example.authorbookmanagementsystem.mapper.book;
 
-import com.example.authorbookmanagementsystem.dto.author.response.AuthorSummaryResponse;
 import com.example.authorbookmanagementsystem.dto.book.request.BookRequest;
 import com.example.authorbookmanagementsystem.dto.book.response.BookResponse;
 import com.example.authorbookmanagementsystem.entity.Author;

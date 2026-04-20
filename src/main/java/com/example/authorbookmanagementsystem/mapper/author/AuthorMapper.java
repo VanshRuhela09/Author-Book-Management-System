@@ -3,7 +3,6 @@ package com.example.authorbookmanagementsystem.mapper.author;
 import com.example.authorbookmanagementsystem.dto.author.request.AuthorRequest;
 import com.example.authorbookmanagementsystem.dto.author.response.AuthorResponse;
 import com.example.authorbookmanagementsystem.entity.Author;
-import com.example.authorbookmanagementsystem.dto.book.response.BookSummaryResponse;
 import com.example.authorbookmanagementsystem.mapper.book.BookMapper;
 import org.springframework.stereotype.Component;
 
