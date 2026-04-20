@@ -10,6 +10,8 @@ import com.example.authorbookmanagementsystem.mapper.auth.AuthMapper;
 import com.example.authorbookmanagementsystem.repository.role.RoleRepository;
 import com.example.authorbookmanagementsystem.repository.user.UserRepository;
 import com.example.authorbookmanagementsystem.security.jwt.JwtUtil;
+import com.example.authorbookmanagementsystem.exception.DuplicateResourceException;
+import com.example.authorbookmanagementsystem.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -32,15 +34,15 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public AuthResponse register(RegisterRequest request) {
-
+        // Check for duplicate username
+        if (userRepository.findByUsername(request.getUsername()).isPresent()) {
+            throw new DuplicateResourceException("User already exists with username: " + request.getUsername());
+        }
         Role role = roleRepository.findByRole(RoleName.LIBRARIAN)
-                .orElseThrow(() -> new RuntimeException("Role not found"));
-
+                .orElseThrow(() -> new ResourceNotFoundException("Role not found"));
         User user = authMapper.toUser(request);
-
         user.setPassword(passwordEncoder.encode(request.getPassword()));
         user.setRoles(Set.of(role));
-
         userRepository.save(user);
 
         return new AuthResponse("User registered successfully");
@@ -51,8 +53,10 @@ public class AuthServiceImpl implements AuthService {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
         );
-
         String token = jwtUtil.generateToken(authentication.getName());
-        return new AuthResponse("Login successful", token);
+        AuthResponse response = new AuthResponse();
+        response.setMessage("Login successful");
+        response.setToken(token);
+        return response;
     }
 }

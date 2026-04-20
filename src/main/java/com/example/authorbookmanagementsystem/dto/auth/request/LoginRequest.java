@@ -13,4 +13,12 @@ public class LoginRequest {
 
     @NotBlank(message = "Password is required")
     private String password;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
 }

@@ -7,6 +7,8 @@ import com.example.authorbookmanagementsystem.entity.Book;
 import com.example.authorbookmanagementsystem.mapper.book.BookMapper;
 import com.example.authorbookmanagementsystem.repository.author.AuthorRepository;
 import com.example.authorbookmanagementsystem.repository.book.BookRepository;
+import com.example.authorbookmanagementsystem.exception.DuplicateResourceException;
+import com.example.authorbookmanagementsystem.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -23,9 +25,12 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public BookResponse createBook(BookRequest request) {
-
+        // Check for duplicate book by ISBN
+        if (bookRepository.findByIsbn(request.getIsbn()).isPresent()) {
+            throw new DuplicateResourceException("Book already exists with ISBN: " + request.getIsbn());
+        }
         Author author = authorRepository.findById(request.getAuthorId())
-                .orElseThrow(() -> new RuntimeException("Author not found"));
+                .orElseThrow(() -> new ResourceNotFoundException("Author not found with id: " + request.getAuthorId()));
 
         Book book = bookMapper.toEntity(request, author);
         return bookMapper.toResponse(bookRepository.save(book));
@@ -43,8 +48,11 @@ public class BookServiceImpl implements BookService {
     public BookResponse updateBook(Long id, BookRequest request) {
 
         Book book = bookRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Book not found"));
-
+                .orElseThrow(() -> new ResourceNotFoundException("Book not found with id: " + id));
+        // Check for duplicate ISBN if changed
+        if (!book.getIsbn().equals(request.getIsbn()) && bookRepository.findByIsbn(request.getIsbn()).isPresent()) {
+            throw new DuplicateResourceException("Book already exists with ISBN: " + request.getIsbn());
+        }
         book.setTitle(request.getTitle());
         book.setIsbn(request.getIsbn());
         book.setPublishedDate(request.getPublishedDate());
@@ -56,7 +64,7 @@ public class BookServiceImpl implements BookService {
     @Override
     public void deleteBook(Long id) {
         if (!bookRepository.existsById(id)) {
-            throw new RuntimeException("Book not found");
+            throw new ResourceNotFoundException("Book not found with id: " + id);
         }
         bookRepository.deleteById(id);
     }

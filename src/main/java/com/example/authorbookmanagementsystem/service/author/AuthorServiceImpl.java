@@ -5,6 +5,8 @@ import com.example.authorbookmanagementsystem.dto.author.response.AuthorResponse
 import com.example.authorbookmanagementsystem.entity.Author;
 import com.example.authorbookmanagementsystem.mapper.author.AuthorMapper;
 import com.example.authorbookmanagementsystem.repository.author.AuthorRepository;
+import com.example.authorbookmanagementsystem.exception.DuplicateResourceException;
+import com.example.authorbookmanagementsystem.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +22,10 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public AuthorResponse createAuthor(AuthorRequest request) {
+        // Check for duplicate author by email
+        if (authorRepository.findByEmail(request.getEmail()).isPresent()) {
+            throw new DuplicateResourceException("Author already exists with email: " + request.getEmail());
+        }
         Author author = authorMapper.toEntity(request);
         return authorMapper.toResponse(authorRepository.save(author));
     }
@@ -36,8 +42,11 @@ public class AuthorServiceImpl implements AuthorService {
     public AuthorResponse updateAuthor(Long id, AuthorRequest request) {
 
         Author author = authorRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Author not found"));
-
+                .orElseThrow(() -> new ResourceNotFoundException("Author not found with id: " + id));
+        // Check for duplicate email if changed
+        if (!author.getEmail().equals(request.getEmail()) && authorRepository.findByEmail(request.getEmail()).isPresent()) {
+            throw new DuplicateResourceException("Author already exists with email: " + request.getEmail());
+        }
         author.setName(request.getName());
         author.setEmail(request.getEmail());
         author.setBio(request.getBio());
@@ -48,7 +57,7 @@ public class AuthorServiceImpl implements AuthorService {
     @Override
     public void deleteAuthor(Long id) {
         if (!authorRepository.existsById(id)) {
-            throw new RuntimeException("Author not found");
+            throw new ResourceNotFoundException("Author not found with id: " + id);
         }
         authorRepository.deleteById(id);
     }
