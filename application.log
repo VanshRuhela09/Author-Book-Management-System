@@ -1,0 +1,48 @@
+# Application log file2026-04-21T11:37:43.967+05:30  INFO 27388 --- [Author-Book-Management-System] [main] c.e.a.Application                        : Starting Application using Java 21.0.9 with PID 27388 (C:\Users\vanshruhela\OneDrive - Nagarro\Desktop\assignments\Author-Book-Management-System\target\classes started by vanshruhela in C:\Users\vanshruhela\OneDrive - Nagarro\Desktop\assignments\Author-Book-Management-System)
+2026-04-21T11:37:43.972+05:30  INFO 27388 --- [Author-Book-Management-System] [main] c.e.a.Application                        : No active profile set, falling back to 1 default profile: "default"
+2026-04-21T11:37:45.364+05:30  INFO 27388 --- [Author-Book-Management-System] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-21T11:37:45.476+05:30  INFO 27388 --- [Author-Book-Management-System] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 101 ms. Found 4 JPA repository interfaces.
+2026-04-21T11:37:46.297+05:30  INFO 27388 --- [Author-Book-Management-System] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-21T11:37:46.311+05:30  INFO 27388 --- [Author-Book-Management-System] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-21T11:37:46.312+05:30  INFO 27388 --- [Author-Book-Management-System] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-21T11:37:46.389+05:30  INFO 27388 --- [Author-Book-Management-System] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2351 ms
+2026-04-21T11:37:46.606+05:30  INFO 27388 --- [Author-Book-Management-System] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-21T11:37:46.701+05:30  INFO 27388 --- [Author-Book-Management-System] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-21T11:37:47.355+05:30  INFO 27388 --- [Author-Book-Management-System] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-21T11:37:47.388+05:30  INFO 27388 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-21T11:37:47.707+05:30  INFO 27388 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@48d31d25
+2026-04-21T11:37:47.709+05:30  INFO 27388 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-21T11:37:47.757+05:30  WARN 27388 --- [Author-Book-Management-System] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-21T11:37:47.794+05:30  INFO 27388 --- [Author-Book-Management-System] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/AuthorBookDB]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: AuthorBookDB/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-21T11:37:48.987+05:30  INFO 27388 --- [Author-Book-Management-System] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-21T11:37:49.171+05:30  INFO 27388 --- [Author-Book-Management-System] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21T11:37:49.260+05:30  INFO 27388 --- [Author-Book-Management-System] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-21T11:37:49.595+05:30  INFO 27388 --- [Author-Book-Management-System] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-21T11:37:49.596+05:30  WARN 27388 --- [Author-Book-Management-System] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-21T11:37:49.772+05:30  WARN 27388 --- [Author-Book-Management-System] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-21T11:37:50.579+05:30  INFO 27388 --- [Author-Book-Management-System] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-21T11:37:50.588+05:30  INFO 27388 --- [Author-Book-Management-System] [main] c.e.a.Application                        : Started Application in 7.207 seconds (process running for 7.74)
+2026-04-21T11:37:51.256+05:30  WARN 27388 --- [Author-Book-Management-System] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-21T11:37:51.258+05:30  WARN 27388 --- [Author-Book-Management-System] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-21T11:38:00.596+05:30  INFO 27388 --- [Author-Book-Management-System] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-21T11:38:00.597+05:30  INFO 27388 --- [Author-Book-Management-System] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-21T11:38:00.598+05:30  INFO 27388 --- [Author-Book-Management-System] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2026-04-21T11:38:00.692+05:30  INFO 27388 --- [Author-Book-Management-System] [http-nio-8081-exec-1] c.e.a.security.jwt.JwtFilter             : JWT validated for user: vansh123
+2026-04-21T11:38:00.713+05:30  INFO 27388 --- [Author-Book-Management-System] [http-nio-8081-exec-1] c.e.a.controller.bulk.BulkController     : Downloading authors CSV
+2026-04-21T11:38:00.713+05:30  INFO 27388 --- [Author-Book-Management-System] [http-nio-8081-exec-1] c.e.a.service.bulk.BulkServiceImpl       : Downloading authors CSV
+2026-04-21T11:38:29.997+05:30  INFO 27388 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-21T11:38:30.004+05:30  INFO 27388 --- [Author-Book-Management-System] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-21T11:38:30.010+05:30  INFO 27388 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21T11:38:30.013+05:30  INFO 27388 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-21T11:38:30.018+05:30  INFO 27388 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

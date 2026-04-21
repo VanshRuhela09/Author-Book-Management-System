@@ -10,11 +10,13 @@ import com.example.authorbookmanagementsystem.repository.book.BookRepository;
 import com.example.authorbookmanagementsystem.exception.DuplicateResourceException;
 import com.example.authorbookmanagementsystem.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class BookServiceImpl implements BookService {
@@ -25,6 +27,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public BookResponse createBook(BookRequest request) {
+        log.info("Creating book with ISBN: {}", request.getIsbn());
         // Check for duplicate book by ISBN
         if (bookRepository.findByIsbn(request.getIsbn()).isPresent()) {
             throw new DuplicateResourceException("Book already exists with ISBN: " + request.getIsbn());
@@ -38,6 +41,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public List<BookResponse> getAllBooks() {
+        log.info("Fetching all books");
         return bookRepository.findAll()
                 .stream()
                 .map(bookMapper::toResponse)
@@ -46,6 +50,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public BookResponse updateBook(Long id, BookRequest request) {
+        log.info("Updating book with id: {}", id);
 
         Book book = bookRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Book not found with id: " + id));
@@ -63,6 +68,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public void deleteBook(Long id) {
+        log.info("Deleting book with id: {}", id);
         if (!bookRepository.existsById(id)) {
             throw new ResourceNotFoundException("Book not found with id: " + id);
         }
@@ -71,6 +77,7 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public BookResponse getBookById(Long id) {
+        log.info("Fetching book by id: {}", id);
         Book book = bookRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Book not found with id: " + id));
         return bookMapper.toResponse(book);

@@ -20,13 +20,4 @@ public class AuthorRequest {
 
     private String bio;
 
-    public String getName() {
-        return name;
-    }
-    public String getEmail() {
-        return email;
-    }
-    public String getBio() {
-        return bio;
-    }
 }

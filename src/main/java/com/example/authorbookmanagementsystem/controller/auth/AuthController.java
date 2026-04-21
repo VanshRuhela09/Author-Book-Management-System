@@ -6,10 +6,12 @@ import com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse;
 import com.example.authorbookmanagementsystem.service.auth.AuthService;
 import com.example.authorbookmanagementsystem.security.jwt.JwtBlacklistService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
@@ -25,19 +27,23 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> register(@RequestBody RegisterRequest request) {
+        log.info("Registering user: {}", request.getUsername());
         return ResponseEntity.ok(authService.register(request));
     }
 
     @PostMapping("/login")
     public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest request) {
+        log.info("User login attempt: {}", request.getUsername());
         return ResponseEntity.ok(authService.login(request));
     }
 
     @PostMapping("/logout")
     public ResponseEntity<String> logout(@RequestHeader("Authorization") String authHeader) {
+        log.info("User logout attempt");
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
             String token = authHeader.substring(7);
             jwtBlacklistService.blacklistToken(token);
+            log.info("Token blacklisted: {}", token);
         }
         return ResponseEntity.ok("Logged out successfully");
     }

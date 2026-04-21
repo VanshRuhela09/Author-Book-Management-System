@@ -24,19 +24,4 @@ public class BookRequest {
 
     private Long authorId;   // important for mapping
 
-    public String getTitle() {
-        return title;
-    }
-    public String getIsbn() {
-        return isbn;
-    }
-    public java.time.LocalDate getPublishedDate() {
-        return publishedDate;
-    }
-    public Double getPrice() {
-        return price;
-    }
-    public Long getAuthorId() {
-        return authorId;
-    }
 }
