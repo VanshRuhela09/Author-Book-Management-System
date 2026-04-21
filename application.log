@@ -46,3 +46,581 @@
 2026-04-21T11:38:30.010+05:30  INFO 27388 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2026-04-21T11:38:30.013+05:30  INFO 27388 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2026-04-21T11:38:30.018+05:30  INFO 27388 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-21T11:41:48.514+05:30  INFO 16808 --- [Author-Book-Management-System] [main] c.e.a.Application                        : Starting Application using Java 21.0.9 with PID 16808 (C:\Users\vanshruhela\OneDrive - Nagarro\Desktop\assignments\Author-Book-Management-System\target\classes started by vanshruhela in C:\Users\vanshruhela\OneDrive - Nagarro\Desktop\assignments\Author-Book-Management-System)
+2026-04-21T11:41:48.519+05:30  INFO 16808 --- [Author-Book-Management-System] [main] c.e.a.Application                        : No active profile set, falling back to 1 default profile: "default"
+2026-04-21T11:41:49.624+05:30  INFO 16808 --- [Author-Book-Management-System] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-21T11:41:49.726+05:30  INFO 16808 --- [Author-Book-Management-System] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 93 ms. Found 4 JPA repository interfaces.
+2026-04-21T11:41:50.703+05:30  INFO 16808 --- [Author-Book-Management-System] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-21T11:41:50.736+05:30  INFO 16808 --- [Author-Book-Management-System] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-21T11:41:50.737+05:30  INFO 16808 --- [Author-Book-Management-System] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-21T11:41:50.913+05:30  INFO 16808 --- [Author-Book-Management-System] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2329 ms
+2026-04-21T11:41:51.379+05:30  INFO 16808 --- [Author-Book-Management-System] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-21T11:41:51.557+05:30  INFO 16808 --- [Author-Book-Management-System] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-21T11:41:52.884+05:30  INFO 16808 --- [Author-Book-Management-System] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-21T11:41:52.915+05:30  INFO 16808 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-21T11:41:53.176+05:30  INFO 16808 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6f65a203
+2026-04-21T11:41:53.178+05:30  INFO 16808 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-21T11:41:53.212+05:30  WARN 16808 --- [Author-Book-Management-System] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-21T11:41:53.241+05:30  INFO 16808 --- [Author-Book-Management-System] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/AuthorBookDB]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: AuthorBookDB/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-21T11:41:54.362+05:30  INFO 16808 --- [Author-Book-Management-System] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-21T11:41:54.472+05:30  INFO 16808 --- [Author-Book-Management-System] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21T11:41:54.548+05:30  INFO 16808 --- [Author-Book-Management-System] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-21T11:41:54.878+05:30  INFO 16808 --- [Author-Book-Management-System] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-21T11:41:54.879+05:30  WARN 16808 --- [Author-Book-Management-System] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-21T11:41:55.021+05:30  WARN 16808 --- [Author-Book-Management-System] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-21T11:41:55.957+05:30  INFO 16808 --- [Author-Book-Management-System] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-21T11:41:55.967+05:30  INFO 16808 --- [Author-Book-Management-System] [main] c.e.a.Application                        : Started Application in 8.05 seconds (process running for 8.586)
+2026-04-21T11:41:56.438+05:30  WARN 16808 --- [Author-Book-Management-System] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-21T11:41:56.438+05:30  WARN 16808 --- [Author-Book-Management-System] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-21T11:42:14.269+05:30  INFO 16808 --- [Author-Book-Management-System] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-21T11:42:14.270+05:30  INFO 16808 --- [Author-Book-Management-System] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-21T11:42:14.273+05:30  INFO 16808 --- [Author-Book-Management-System] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-04-21T12:31:40.511+05:30  INFO 16808 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-21T12:31:40.524+05:30  INFO 16808 --- [Author-Book-Management-System] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-21T12:31:40.531+05:30  INFO 16808 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21T12:31:40.541+05:30  INFO 16808 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-21T12:31:40.545+05:30  INFO 16808 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-21T12:35:28.378+05:30  INFO 13036 --- [Author-Book-Management-System] [main] c.e.a.Application                        : Starting Application using Java 21.0.9 with PID 13036 (C:\Users\vanshruhela\OneDrive - Nagarro\Desktop\assignments\Author-Book-Management-System\target\classes started by vanshruhela in C:\Users\vanshruhela\OneDrive - Nagarro\Desktop\assignments\Author-Book-Management-System)
+2026-04-21T12:35:28.385+05:30  INFO 13036 --- [Author-Book-Management-System] [main] c.e.a.Application                        : No active profile set, falling back to 1 default profile: "default"
+2026-04-21T12:35:29.945+05:30  INFO 13036 --- [Author-Book-Management-System] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-21T12:35:30.055+05:30  INFO 13036 --- [Author-Book-Management-System] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 102 ms. Found 4 JPA repository interfaces.
+2026-04-21T12:35:30.887+05:30  INFO 13036 --- [Author-Book-Management-System] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-21T12:35:30.911+05:30  INFO 13036 --- [Author-Book-Management-System] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-21T12:35:30.911+05:30  INFO 13036 --- [Author-Book-Management-System] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-21T12:35:30.992+05:30  INFO 13036 --- [Author-Book-Management-System] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2518 ms
+2026-04-21T12:35:31.242+05:30  INFO 13036 --- [Author-Book-Management-System] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-21T12:35:31.327+05:30  INFO 13036 --- [Author-Book-Management-System] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-21T12:35:31.931+05:30  INFO 13036 --- [Author-Book-Management-System] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-21T12:35:31.967+05:30  INFO 13036 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-21T12:35:32.301+05:30  INFO 13036 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@d978ab9
+2026-04-21T12:35:32.303+05:30  INFO 13036 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-21T12:35:32.336+05:30  WARN 13036 --- [Author-Book-Management-System] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-21T12:35:32.364+05:30  INFO 13036 --- [Author-Book-Management-System] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/AuthorBookDB]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: AuthorBookDB/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-21T12:35:33.419+05:30  INFO 13036 --- [Author-Book-Management-System] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-21T12:35:33.638+05:30  INFO 13036 --- [Author-Book-Management-System] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21T12:35:33.702+05:30  INFO 13036 --- [Author-Book-Management-System] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-21T12:35:34.052+05:30  INFO 13036 --- [Author-Book-Management-System] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-21T12:35:34.053+05:30  WARN 13036 --- [Author-Book-Management-System] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-21T12:35:34.196+05:30  WARN 13036 --- [Author-Book-Management-System] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-21T12:35:35.008+05:30  INFO 13036 --- [Author-Book-Management-System] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-21T12:35:35.018+05:30  INFO 13036 --- [Author-Book-Management-System] [main] c.e.a.Application                        : Started Application in 7.369 seconds (process running for 8.099)
+2026-04-21T12:35:35.503+05:30  WARN 13036 --- [Author-Book-Management-System] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-21T12:35:35.504+05:30  WARN 13036 --- [Author-Book-Management-System] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-21T12:35:37.801+05:30  INFO 13036 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-21T12:35:37.808+05:30  INFO 13036 --- [Author-Book-Management-System] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-21T12:35:37.814+05:30  INFO 13036 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21T12:35:37.817+05:30  INFO 13036 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-21T12:35:37.829+05:30  INFO 13036 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-21T12:37:04.687+05:30  INFO 23672 --- [Author-Book-Management-System] [main] c.e.a.Application                        : Starting Application using Java 21.0.9 with PID 23672 (C:\Users\vanshruhela\OneDrive - Nagarro\Desktop\assignments\Author-Book-Management-System\target\classes started by vanshruhela in C:\Users\vanshruhela\OneDrive - Nagarro\Desktop\assignments\Author-Book-Management-System)
+2026-04-21T12:37:04.691+05:30  INFO 23672 --- [Author-Book-Management-System] [main] c.e.a.Application                        : No active profile set, falling back to 1 default profile: "default"
+2026-04-21T12:37:05.765+05:30  INFO 23672 --- [Author-Book-Management-System] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-21T12:37:05.864+05:30  INFO 23672 --- [Author-Book-Management-System] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 89 ms. Found 4 JPA repository interfaces.
+2026-04-21T12:37:06.560+05:30  INFO 23672 --- [Author-Book-Management-System] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-21T12:37:06.574+05:30  INFO 23672 --- [Author-Book-Management-System] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-21T12:37:06.574+05:30  INFO 23672 --- [Author-Book-Management-System] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-21T12:37:06.662+05:30  INFO 23672 --- [Author-Book-Management-System] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1914 ms
+2026-04-21T12:37:06.866+05:30  INFO 23672 --- [Author-Book-Management-System] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-21T12:37:06.942+05:30  INFO 23672 --- [Author-Book-Management-System] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-21T12:37:07.433+05:30  INFO 23672 --- [Author-Book-Management-System] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-21T12:37:07.465+05:30  INFO 23672 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-21T12:37:07.729+05:30  INFO 23672 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3cf06a01
+2026-04-21T12:37:07.731+05:30  INFO 23672 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-21T12:37:07.759+05:30  WARN 23672 --- [Author-Book-Management-System] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-21T12:37:07.793+05:30  INFO 23672 --- [Author-Book-Management-System] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/AuthorBookDB]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: AuthorBookDB/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-21T12:37:08.906+05:30  INFO 23672 --- [Author-Book-Management-System] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-21T12:37:09.009+05:30  INFO 23672 --- [Author-Book-Management-System] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21T12:37:09.087+05:30  INFO 23672 --- [Author-Book-Management-System] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-21T12:37:09.516+05:30  INFO 23672 --- [Author-Book-Management-System] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-21T12:37:09.517+05:30  WARN 23672 --- [Author-Book-Management-System] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-21T12:37:09.651+05:30  WARN 23672 --- [Author-Book-Management-System] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-21T12:37:10.595+05:30  INFO 23672 --- [Author-Book-Management-System] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-21T12:37:10.605+05:30  INFO 23672 --- [Author-Book-Management-System] [main] c.e.a.Application                        : Started Application in 6.49 seconds (process running for 7.061)
+2026-04-21T12:37:11.090+05:30  WARN 23672 --- [Author-Book-Management-System] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-21T12:37:11.090+05:30  WARN 23672 --- [Author-Book-Management-System] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-21T12:37:27.164+05:30  INFO 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-21T12:37:27.164+05:30  INFO 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-21T12:37:27.166+05:30  INFO 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-04-21T12:37:27.274+05:30  INFO 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-3] c.e.a.security.jwt.JwtFilter             : JWT validated for user: vansh123
+2026-04-21T12:37:27.283+05:30  WARN 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /login
+2026-04-21T12:37:27.292+05:30 ERROR 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-3] c.e.a.exception.GlobalExceptionHandler   : No endpoint found for: GET /login
+2026-04-21T12:37:35.335+05:30  INFO 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-5] c.e.a.security.jwt.JwtFilter             : JWT validated for user: vansh123
+2026-04-21T12:37:35.336+05:30  WARN 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-5] o.s.web.servlet.PageNotFound             : No mapping for GET /login
+2026-04-21T12:37:35.337+05:30 ERROR 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-5] c.e.a.exception.GlobalExceptionHandler   : No endpoint found for: GET /login
+2026-04-21T12:37:36.589+05:30  INFO 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-8] c.e.a.security.jwt.JwtFilter             : JWT validated for user: vansh123
+2026-04-21T12:37:36.590+05:30  WARN 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-8] o.s.web.servlet.PageNotFound             : No mapping for GET /login
+2026-04-21T12:37:36.590+05:30 ERROR 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-8] c.e.a.exception.GlobalExceptionHandler   : No endpoint found for: GET /login
+2026-04-21T12:37:43.138+05:30  INFO 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-9] c.e.a.security.jwt.JwtFilter             : JWT validated for user: vansh123
+2026-04-21T12:37:43.140+05:30  WARN 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-9] o.s.web.servlet.PageNotFound             : No mapping for GET /login
+2026-04-21T12:37:43.141+05:30 ERROR 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-9] c.e.a.exception.GlobalExceptionHandler   : No endpoint found for: GET /login
+2026-04-21T12:38:11.363+05:30  INFO 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-3] c.e.a.security.jwt.JwtFilter             : JWT validated for user: vansh123
+2026-04-21T12:38:11.364+05:30  WARN 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-3] o.s.web.servlet.PageNotFound             : No mapping for GET /login
+2026-04-21T12:38:11.364+05:30 ERROR 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-3] c.e.a.exception.GlobalExceptionHandler   : No endpoint found for: GET /login
+2026-04-21T12:38:26.060+05:30  INFO 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-4] c.e.a.security.jwt.JwtFilter             : JWT validated for user: vansh123
+2026-04-21T12:38:26.081+05:30  INFO 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-4] c.e.a.controller.auth.AuthController     : User logout attempt
+2026-04-21T12:38:26.081+05:30  INFO 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-4] c.e.a.controller.auth.AuthController     : Token blacklisted: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YW5zaDEyMyIsImlhdCI6MTc3NjcwNTY2NiwiZXhwIjoxNzc2NzkyMDY2fQ.QgarmYULtncxENtULvHs4Pqrt6R7Je70IVqdIArSvAc
+2026-04-21T12:38:34.814+05:30  WARN 23672 --- [Author-Book-Management-System] [http-nio-8081-exec-5] c.e.a.security.jwt.JwtFilter             : Token is blacklisted: eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ2YW5zaDEyMyIsImlhdCI6MTc3NjcwNTY2NiwiZXhwIjoxNzc2NzkyMDY2fQ.QgarmYULtncxENtULvHs4Pqrt6R7Je70IVqdIArSvAc
+2026-04-21T13:20:33.528+05:30  WARN 23672 --- [Author-Book-Management-System] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=41m25s665ms379µs700ns).
+2026-04-21T13:21:53.508+05:30  INFO 23672 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-21T13:21:53.517+05:30  INFO 23672 --- [Author-Book-Management-System] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-21T13:21:53.522+05:30  INFO 23672 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21T13:21:53.524+05:30  INFO 23672 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-21T13:21:53.527+05:30  INFO 23672 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-04-21T14:02:40.578+05:30  INFO 3000 --- [Author-Book-Management-System] [main] c.e.a.Application                        : Starting Application using Java 21.0.9 with PID 3000 (C:\Users\vanshruhela\OneDrive - Nagarro\Desktop\assignments\Author-Book-Management-System\target\classes started by vanshruhela in C:\Users\vanshruhela\OneDrive - Nagarro\Desktop\assignments\Author-Book-Management-System)
+2026-04-21T14:02:40.584+05:30  INFO 3000 --- [Author-Book-Management-System] [main] c.e.a.Application                        : No active profile set, falling back to 1 default profile: "default"
+2026-04-21T14:02:41.997+05:30  INFO 3000 --- [Author-Book-Management-System] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-21T14:02:42.104+05:30  INFO 3000 --- [Author-Book-Management-System] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 98 ms. Found 4 JPA repository interfaces.
+2026-04-21T14:02:43.268+05:30  INFO 3000 --- [Author-Book-Management-System] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-21T14:02:43.295+05:30  INFO 3000 --- [Author-Book-Management-System] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-21T14:02:43.296+05:30  INFO 3000 --- [Author-Book-Management-System] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-21T14:02:43.377+05:30  INFO 3000 --- [Author-Book-Management-System] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2731 ms
+2026-04-21T14:02:43.781+05:30  INFO 3000 --- [Author-Book-Management-System] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-21T14:02:43.856+05:30  INFO 3000 --- [Author-Book-Management-System] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-21T14:02:44.466+05:30  INFO 3000 --- [Author-Book-Management-System] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-21T14:02:44.492+05:30  INFO 3000 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-21T14:02:44.830+05:30  INFO 3000 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@c677d7e
+2026-04-21T14:02:44.833+05:30  INFO 3000 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-21T14:02:44.894+05:30  WARN 3000 --- [Author-Book-Management-System] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-21T14:02:44.934+05:30  INFO 3000 --- [Author-Book-Management-System] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/AuthorBookDB]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: AuthorBookDB/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-21T14:02:46.009+05:30  INFO 3000 --- [Author-Book-Management-System] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-21T14:02:46.211+05:30  INFO 3000 --- [Author-Book-Management-System] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21T14:02:46.516+05:30  INFO 3000 --- [Author-Book-Management-System] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-21T14:02:47.140+05:30  INFO 3000 --- [Author-Book-Management-System] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-21T14:02:47.140+05:30  WARN 3000 --- [Author-Book-Management-System] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-21T14:02:47.479+05:30  WARN 3000 --- [Author-Book-Management-System] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-21T14:02:48.770+05:30  INFO 3000 --- [Author-Book-Management-System] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-21T14:02:48.781+05:30  INFO 3000 --- [Author-Book-Management-System] [main] c.e.a.Application                        : Started Application in 8.786 seconds (process running for 9.395)
+2026-04-21T14:02:49.413+05:30  WARN 3000 --- [Author-Book-Management-System] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-21T14:02:49.413+05:30  WARN 3000 --- [Author-Book-Management-System] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-21T14:04:32.430+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-21T14:04:32.432+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-21T14:04:32.436+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2026-04-21T14:05:19.436+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-2] c.e.a.aop.LoggingAspect                  : [CONTROLLER] >> Entering: AuthController.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@299753d5]
+2026-04-21T14:05:19.436+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-2] c.e.a.aop.LoggingAspect                  : [SERVICE] >> Entering: AuthServiceImpl.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@299753d5]
+2026-04-21T14:05:19.926+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-2] c.e.a.aop.LoggingAspect                  : [SERVICE] << Exiting: AuthServiceImpl.login(..) | Returned: com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@17a1373b
+2026-04-21T14:05:19.928+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-2] c.e.a.aop.LoggingAspect                  : [CONTROLLER] << Exiting: AuthController.login(..) | Returned: <200 OK OK,com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@17a1373b,[]>
+2026-04-21T14:05:24.946+05:30  WARN 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-4] o.s.web.servlet.PageNotFound             : No mapping for POST /auth/login/ds
+2026-04-21T14:05:24.951+05:30 ERROR 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-4] c.e.a.exception.GlobalExceptionHandler   : No endpoint found for: POST /auth/login/ds
+2026-04-21T14:05:28.638+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-5] c.e.a.aop.LoggingAspect                  : [CONTROLLER] >> Entering: AuthController.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@12662da4]
+2026-04-21T14:05:28.638+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-5] c.e.a.aop.LoggingAspect                  : [SERVICE] >> Entering: AuthServiceImpl.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@12662da4]
+2026-04-21T14:05:28.801+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-5] c.e.a.aop.LoggingAspect                  : [SERVICE] << Exiting: AuthServiceImpl.login(..) | Returned: com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@656aaced
+2026-04-21T14:05:28.802+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-5] c.e.a.aop.LoggingAspect                  : [CONTROLLER] << Exiting: AuthController.login(..) | Returned: <200 OK OK,com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@656aaced,[]>
+2026-04-21T14:05:36.664+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-6] c.e.a.aop.LoggingAspect                  : [CONTROLLER] >> Entering: AuthController.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@4d604d8d]
+2026-04-21T14:05:36.665+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-6] c.e.a.aop.LoggingAspect                  : [SERVICE] >> Entering: AuthServiceImpl.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@4d604d8d]
+2026-04-21T14:05:36.831+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-6] c.e.a.aop.LoggingAspect                  : [SERVICE] << Exiting: AuthServiceImpl.login(..) | Returned: com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@63a157e3
+2026-04-21T14:05:36.832+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-6] c.e.a.aop.LoggingAspect                  : [CONTROLLER] << Exiting: AuthController.login(..) | Returned: <200 OK OK,com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@63a157e3,[]>
+2026-04-21T14:05:38.638+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-7] c.e.a.aop.LoggingAspect                  : [CONTROLLER] >> Entering: AuthController.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@5ff0858]
+2026-04-21T14:05:38.639+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-7] c.e.a.aop.LoggingAspect                  : [SERVICE] >> Entering: AuthServiceImpl.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@5ff0858]
+2026-04-21T14:05:38.799+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-7] c.e.a.aop.LoggingAspect                  : [SERVICE] << Exiting: AuthServiceImpl.login(..) | Returned: com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@317730aa
+2026-04-21T14:05:38.799+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-7] c.e.a.aop.LoggingAspect                  : [CONTROLLER] << Exiting: AuthController.login(..) | Returned: <200 OK OK,com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@317730aa,[]>
+2026-04-21T14:05:39.524+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-8] c.e.a.aop.LoggingAspect                  : [CONTROLLER] >> Entering: AuthController.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@798b1b48]
+2026-04-21T14:05:39.525+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-8] c.e.a.aop.LoggingAspect                  : [SERVICE] >> Entering: AuthServiceImpl.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@798b1b48]
+2026-04-21T14:05:39.709+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-8] c.e.a.aop.LoggingAspect                  : [SERVICE] << Exiting: AuthServiceImpl.login(..) | Returned: com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@74137982
+2026-04-21T14:05:39.710+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-8] c.e.a.aop.LoggingAspect                  : [CONTROLLER] << Exiting: AuthController.login(..) | Returned: <200 OK OK,com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@74137982,[]>
+2026-04-21T14:05:40.312+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-9] c.e.a.aop.LoggingAspect                  : [CONTROLLER] >> Entering: AuthController.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@4761872]
+2026-04-21T14:05:40.313+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-9] c.e.a.aop.LoggingAspect                  : [SERVICE] >> Entering: AuthServiceImpl.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@4761872]
+2026-04-21T14:05:40.494+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-9] c.e.a.aop.LoggingAspect                  : [SERVICE] << Exiting: AuthServiceImpl.login(..) | Returned: com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@3afe7298
+2026-04-21T14:05:40.494+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-9] c.e.a.aop.LoggingAspect                  : [CONTROLLER] << Exiting: AuthController.login(..) | Returned: <200 OK OK,com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@3afe7298,[]>
+2026-04-21T14:06:16.263+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-3] c.e.a.aop.LoggingAspect                  : [CONTROLLER] >> Entering: AuthController.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@2763f0f2]
+2026-04-21T14:06:16.263+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-3] c.e.a.aop.LoggingAspect                  : [SERVICE] >> Entering: AuthServiceImpl.login(..) | Args: [com.example.authorbookmanagementsystem.dto.auth.request.LoginRequest@2763f0f2]
+2026-04-21T14:06:16.436+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-3] c.e.a.aop.LoggingAspect                  : [SERVICE] << Exiting: AuthServiceImpl.login(..) | Returned: com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@4d55f38c
+2026-04-21T14:06:16.437+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-3] c.e.a.aop.LoggingAspect                  : [CONTROLLER] << Exiting: AuthController.login(..) | Returned: <200 OK OK,com.example.authorbookmanagementsystem.dto.auth.response.AuthResponse@4d55f38c,[]>
+2026-04-21T14:06:39.497+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-1] c.e.a.security.jwt.JwtFilter             : JWT validated for user: vansh123
+2026-04-21T14:06:39.542+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-1] c.e.a.aop.LoggingAspect                  : [CONTROLLER] >> Entering: BookController.createBook(..) | Args: [com.example.authorbookmanagementsystem.dto.book.request.BookRequest@64c427b3]
+2026-04-21T14:06:39.542+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-1] c.e.a.aop.LoggingAspect                  : [SERVICE] >> Entering: BookServiceImpl.createBook(..) | Args: [com.example.authorbookmanagementsystem.dto.book.request.BookRequest@64c427b3]
+2026-04-21T14:06:39.597+05:30 ERROR 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-1] c.e.a.aop.ExceptionLoggingAspect         : [EXCEPTION][SERVICE] Unexpected exception in BookServiceImpl.createBook(..) : InvalidDataAccessApiUsageException - The given id must not be null
+
+org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:464) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:112) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:576) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-7.0.6.jar:7.0.6]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:346) ~[spring-tx-7.0.6.jar:7.0.6]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:157) ~[spring-tx-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:166) ~[spring-data-jpa-4.0.4.jar:4.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.6.jar:7.0.6]
+	at jdk.proxy2/jdk.proxy2.$Proxy156.findById(Unknown Source) ~[na:na]
+	at com.example.authorbookmanagementsystem.service.book.BookServiceImpl.createBook(BookServiceImpl.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:82) ~[spring-aop-7.0.6.jar:7.0.6]
+	at com.example.authorbookmanagementsystem.aop.PerformanceMonitoringAspect.monitorExecutionTime(PerformanceMonitoringAspect.java:36) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:648) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:630) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:56) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:63) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:96) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.6.jar:7.0.6]
+	at com.example.authorbookmanagementsystem.service.book.BookServiceImpl$$SpringCGLIB$$0.createBook(<generated>) ~[classes/:na]
+	at com.example.authorbookmanagementsystem.controller.book.BookController.createBook(BookController.java:21) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:56) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:63) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:96) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.6.jar:7.0.6]
+	at com.example.authorbookmanagementsystem.controller.book.BookController$$SpringCGLIB$$0.createBook(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.20.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.20.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at com.example.authorbookmanagementsystem.security.jwt.JwtFilter.doFilterInternal(JwtFilter.java:74) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.4.jar:7.0.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.lang.IllegalArgumentException: The given id must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:182) ~[spring-core-7.0.6.jar:7.0.6]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById(SimpleJpaRepository.java:330) ~[spring-data-jpa-4.0.4.jar:4.0.4]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.6.jar:7.0.6]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.6.jar:7.0.6]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.6.jar:7.0.6]
+	... 136 common frames omitted
+
+2026-04-21T14:06:39.613+05:30 ERROR 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-1] c.e.a.aop.ExceptionLoggingAspect         : [EXCEPTION][CONTROLLER] Exception in BookController.createBook(..) : InvalidDataAccessApiUsageException - The given id must not be null
+2026-04-21T14:06:39.615+05:30 ERROR 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-1] c.e.a.exception.GlobalExceptionHandler   : Runtime exception: The given id must not be null
+
+org.springframework.dao.InvalidDataAccessApiUsageException: The given id must not be null
+	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:464) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.hibernate.HibernateExceptionTranslator.translateExceptionIfPossible(HibernateExceptionTranslator.java:112) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:223) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:576) ~[spring-orm-7.0.6.jar:7.0.6]
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61) ~[spring-tx-7.0.6.jar:7.0.6]
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:346) ~[spring-tx-7.0.6.jar:7.0.6]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:157) ~[spring-tx-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:166) ~[spring-data-jpa-4.0.4.jar:4.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:222) ~[spring-aop-7.0.6.jar:7.0.6]
+	at jdk.proxy2/jdk.proxy2.$Proxy156.findById(Unknown Source) ~[na:na]
+	at com.example.authorbookmanagementsystem.service.book.BookServiceImpl.createBook(BookServiceImpl.java:31) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:82) ~[spring-aop-7.0.6.jar:7.0.6]
+	at com.example.authorbookmanagementsystem.aop.PerformanceMonitoringAspect.monitorExecutionTime(PerformanceMonitoringAspect.java:36) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:648) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:630) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:70) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:56) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:63) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:96) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.6.jar:7.0.6]
+	at com.example.authorbookmanagementsystem.service.book.BookServiceImpl$$SpringCGLIB$$0.createBook(<generated>) ~[classes/:na]
+	at com.example.authorbookmanagementsystem.controller.book.BookController.createBook(BookController.java:21) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.adapter.AfterReturningAdviceInterceptor.invoke(AfterReturningAdviceInterceptor.java:56) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.adapter.MethodBeforeAdviceInterceptor.invoke(MethodBeforeAdviceInterceptor.java:57) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.aspectj.AspectJAfterThrowingAdvice.invoke(AspectJAfterThrowingAdvice.java:63) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:96) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.6.jar:7.0.6]
+	at com.example.authorbookmanagementsystem.controller.book.BookController$$SpringCGLIB$$0.createBook(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.20.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.6.jar:7.0.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.20.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at com.example.authorbookmanagementsystem.security.jwt.JwtFilter.doFilterInternal(JwtFilter.java:74) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.4.jar:7.0.4]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.4.jar:7.0.4]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.6.jar:7.0.6]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.20.jar:11.0.20]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.lang.IllegalArgumentException: The given id must not be null
+	at org.springframework.util.Assert.notNull(Assert.java:182) ~[spring-core-7.0.6.jar:7.0.6]
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById(SimpleJpaRepository.java:330) ~[spring-data-jpa-4.0.4.jar:4.0.4]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:278) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.0.4.jar:4.0.4]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:133) ~[spring-tx-7.0.6.jar:7.0.6]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:371) ~[spring-tx-7.0.6.jar:7.0.6]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:130) ~[spring-tx-7.0.6.jar:7.0.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.6.jar:7.0.6]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:135) ~[spring-tx-7.0.6.jar:7.0.6]
+	... 136 common frames omitted
+
+2026-04-21T14:06:44.635+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-4] c.e.a.security.jwt.JwtFilter             : JWT validated for user: vansh123
+2026-04-21T14:06:44.636+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-4] c.e.a.aop.LoggingAspect                  : [CONTROLLER] >> Entering: BookController.getAllBooks() | Args: []
+2026-04-21T14:06:44.637+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-4] c.e.a.aop.LoggingAspect                  : [SERVICE] >> Entering: BookServiceImpl.getAllBooks() | Args: []
+2026-04-21T14:06:44.717+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-4] c.e.a.aop.LoggingAspect                  : [SERVICE] << Exiting: BookServiceImpl.getAllBooks() | Returned: [com.example.authorbookmanagementsystem.dto.book.response.BookResponse@3cc5dda4, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@2e026281, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@44d78d25, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@74c30e82, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@66f9c543, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@5b52a577, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@2314b59d, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@4f4f0863]
+2026-04-21T14:06:44.717+05:30  INFO 3000 --- [Author-Book-Management-System] [http-nio-8081-exec-4] c.e.a.aop.LoggingAspect                  : [CONTROLLER] << Exiting: BookController.getAllBooks() | Returned: <200 OK OK,[com.example.authorbookmanagementsystem.dto.book.response.BookResponse@3cc5dda4, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@2e026281, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@44d78d25, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@74c30e82, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@66f9c543, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@5b52a577, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@2314b59d, com.example.authorbookmanagementsystem.dto.book.response.BookResponse@4f4f0863],[]>
+2026-04-21T14:07:19.330+05:30  INFO 3000 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] o.s.boot.tomcat.GracefulShutdown         : Commencing graceful shutdown. Waiting for active requests to complete
+2026-04-21T14:07:19.338+05:30  INFO 3000 --- [Author-Book-Management-System] [tomcat-shutdown] o.s.boot.tomcat.GracefulShutdown         : Graceful shutdown complete
+2026-04-21T14:07:19.344+05:30  INFO 3000 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21T14:07:19.350+05:30  INFO 3000 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-04-21T14:07:19.356+05:30  INFO 3000 --- [Author-Book-Management-System] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

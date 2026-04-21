@@ -13,7 +13,6 @@ import com.example.authorbookmanagementsystem.security.jwt.JwtUtil;
 import com.example.authorbookmanagementsystem.exception.DuplicateResourceException;
 import com.example.authorbookmanagementsystem.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -22,7 +21,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Slf4j
 @Service
 @RequiredArgsConstructor
 public class AuthServiceImpl implements AuthService {
@@ -36,8 +34,6 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public AuthResponse register(RegisterRequest request) {
-        log.info("Registering user: {}", request.getUsername());
-        // Check for duplicate username
         if (userRepository.findByUsername(request.getUsername()).isPresent()) {
             throw new DuplicateResourceException("User already exists with username: " + request.getUsername());
         }
@@ -53,7 +49,6 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public AuthResponse login(LoginRequest request) {
-        log.info("User login attempt: {}", request.getUsername());
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword())
         );

@@ -8,13 +8,11 @@ import com.example.authorbookmanagementsystem.repository.author.AuthorRepository
 import com.example.authorbookmanagementsystem.exception.DuplicateResourceException;
 import com.example.authorbookmanagementsystem.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Slf4j
 @Service
 @RequiredArgsConstructor
 public class AuthorServiceImpl implements AuthorService {
@@ -24,8 +22,6 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public AuthorResponse createAuthor(AuthorRequest request) {
-        log.info("Creating author with email: {}", request.getEmail());
-        // Check for duplicate author by email
         if (authorRepository.findByEmail(request.getEmail()).isPresent()) {
             throw new DuplicateResourceException("Author already exists with email: " + request.getEmail());
         }
@@ -35,7 +31,6 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public List<AuthorResponse> getAllAuthors() {
-        log.info("Fetching all authors");
         return authorRepository.findAll()
                 .stream()
                 .map(authorMapper::toResponse)
@@ -44,24 +39,19 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public AuthorResponse updateAuthor(Long id, AuthorRequest request) {
-        log.info("Updating author with id: {}", id);
-
         Author author = authorRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Author not found with id: " + id));
-        // Check for duplicate email if changed
         if (!author.getEmail().equals(request.getEmail()) && authorRepository.findByEmail(request.getEmail()).isPresent()) {
             throw new DuplicateResourceException("Author already exists with email: " + request.getEmail());
         }
         author.setName(request.getName());
         author.setEmail(request.getEmail());
         author.setBio(request.getBio());
-
         return authorMapper.toResponse(authorRepository.save(author));
     }
 
     @Override
     public void deleteAuthor(Long id) {
-        log.info("Deleting author with id: {}", id);
         if (!authorRepository.existsById(id)) {
             throw new ResourceNotFoundException("Author not found with id: " + id);
         }
@@ -70,7 +60,6 @@ public class AuthorServiceImpl implements AuthorService {
 
     @Override
     public AuthorResponse getAuthorById(Long id) {
-        log.info("Fetching author by id: {}", id);
         Author author = authorRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Author not found with id: " + id));
         return authorMapper.toResponse(author);
