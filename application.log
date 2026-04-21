@@ -3110,3 +3110,41 @@ Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No q
 2026-04-21T17:59:10.474+05:30  INFO 31644 --- [Author-Book-Management-System] [main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
 2026-04-21T17:59:10.476+05:30  INFO 31644 --- [Author-Book-Management-System] [main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
 2026-04-21T17:59:10.486+05:30  INFO 31644 --- [Author-Book-Management-System] [main] c.e.a.c.auth.AuthControllerTest          : Started AuthControllerTest in 0.398 seconds (process running for 6.965)
+2026-04-21T17:59:50.046+05:30  INFO 25408 --- [Author-Book-Management-System] [main] c.e.a.Application                        : Starting Application using Java 21.0.9 with PID 25408 (C:\Users\vanshruhela\OneDrive - Nagarro\Desktop\assignments\Author-Book-Management-System\target\classes started by vanshruhela in C:\Users\vanshruhela\OneDrive - Nagarro\Desktop\assignments\Author-Book-Management-System)
+2026-04-21T17:59:50.050+05:30  INFO 25408 --- [Author-Book-Management-System] [main] c.e.a.Application                        : No active profile set, falling back to 1 default profile: "default"
+2026-04-21T17:59:51.569+05:30  INFO 25408 --- [Author-Book-Management-System] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-04-21T17:59:51.677+05:30  INFO 25408 --- [Author-Book-Management-System] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 95 ms. Found 4 JPA repository interfaces.
+2026-04-21T17:59:52.832+05:30  INFO 25408 --- [Author-Book-Management-System] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8081 (http)
+2026-04-21T17:59:52.852+05:30  INFO 25408 --- [Author-Book-Management-System] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-21T17:59:52.853+05:30  INFO 25408 --- [Author-Book-Management-System] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.20]
+2026-04-21T17:59:52.935+05:30  INFO 25408 --- [Author-Book-Management-System] [main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 2816 ms
+2026-04-21T17:59:53.250+05:30  INFO 25408 --- [Author-Book-Management-System] [main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-04-21T17:59:53.322+05:30  INFO 25408 --- [Author-Book-Management-System] [main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.7.Final
+2026-04-21T17:59:53.887+05:30  INFO 25408 --- [Author-Book-Management-System] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-04-21T17:59:53.924+05:30  INFO 25408 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-04-21T17:59:54.244+05:30  INFO 25408 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@29ea5e0
+2026-04-21T17:59:54.246+05:30  INFO 25408 --- [Author-Book-Management-System] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-04-21T17:59:54.301+05:30  WARN 25408 --- [Author-Book-Management-System] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-04-21T17:59:54.335+05:30  INFO 25408 --- [Author-Book-Management-System] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/AuthorBookDB]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 18.1
+	Default catalog/schema: AuthorBookDB/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-04-21T17:59:55.490+05:30  INFO 25408 --- [Author-Book-Management-System] [main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-04-21T17:59:55.591+05:30  INFO 25408 --- [Author-Book-Management-System] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-04-21T17:59:55.892+05:30  INFO 25408 --- [Author-Book-Management-System] [main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-04-21T17:59:56.482+05:30  INFO 25408 --- [Author-Book-Management-System] [main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
+2026-04-21T17:59:56.484+05:30  WARN 25408 --- [Author-Book-Management-System] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
+2026-04-21T17:59:56.783+05:30  WARN 25408 --- [Author-Book-Management-System] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-04-21T17:59:58.285+05:30  INFO 25408 --- [Author-Book-Management-System] [main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8081 (http) with context path '/'
+2026-04-21T17:59:58.342+05:30  INFO 25408 --- [Author-Book-Management-System] [main] c.e.a.Application                        : Started Application in 8.92 seconds (process running for 9.472)
+2026-04-21T17:59:59.106+05:30  WARN 25408 --- [Author-Book-Management-System] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-04-21T17:59:59.107+05:30  WARN 25408 --- [Author-Book-Management-System] [main] o.s.core.events.SpringDocAppInitializer  : SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-04-21T21:28:19.441+05:30  WARN 25408 --- [Author-Book-Management-System] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h28m53s937ms139µs900ns).
