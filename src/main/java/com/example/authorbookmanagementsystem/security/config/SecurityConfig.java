@@ -36,6 +36,14 @@ public class SecurityConfig {
                         // Allow Spring's internal error endpoint (handles 404, etc.)
                         .requestMatchers("/error").permitAll()
 
+                        // Swagger UI and OpenAPI docs (public)
+                        .requestMatchers(
+                                "/swagger-ui.html",
+                                "/swagger-ui/**",
+                                "/v3/api-docs",
+                                "/v3/api-docs/**"
+                        ).permitAll()
+
                         // AUTH APIs (public)
                         .requestMatchers("/auth/**").permitAll()
 
